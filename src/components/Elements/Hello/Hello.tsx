@@ -1,11 +1,9 @@
-import React from "react";
-
 export type HelloProps = {}
 
-export function Hello (props: HelloProps) {
+export const Hello = ({}: HelloProps) => {
   return (
     <div>
       Hello
     </div>
-  );
-};
+  )
+}

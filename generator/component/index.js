@@ -46,12 +46,12 @@ module.exports = {
       actions.push(
         {
           type: 'add',
-          path: 'src/components/Elements/{{properCase name}}/index.ts',
+          path: 'src/components/Elements/{{pascalCase compoent}}/index.ts',
           templateFile: 'generator/component/index.ts.hbs',
         },
         {
           type: 'add',
-          path: 'src/components/Elements/{{properCase name}}/{{properCase name}}.tsx',
+          path: 'src/components/Elements/{{pascalCase compoent}}/{{pascalCase compoent}}.tsx',
           templateFile: 'generator/component/Component.tsx.hbs',
         }
       )
@@ -62,12 +62,10 @@ module.exports = {
           type: 'modify',
           path: 'src/components/Elements/index.ts',
           templateFile: 'generator/component/index.ts.hbs',
-          transform: (current, { name }) => {
-            console.log(current)
+          transform: (current, { compoent }) => {
             const currentModules = current.trim()
-            console.log(flatStr)
-            const createReExportModulePath = moduleName => `export * from "./${moduleName}";`
-            const addedModules = currentModules + '\n' + createReExportModulePath(name) + '\n'
+            const createReExportModulePath = moduleName => `export * from './${moduleName}'`
+            const addedModules = currentModules + '\n' + createReExportModulePath(compoent) + '\n'
 
             return Promise.resolve(addedModules)
           }

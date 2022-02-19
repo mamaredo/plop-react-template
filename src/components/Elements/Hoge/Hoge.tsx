@@ -1,11 +1,9 @@
-import React from "react";
-
 export type HogeProps = {}
 
-export function Hoge (props: HogeProps) {
+export const Hoge = ({}: HogeProps) => {
   return (
     <div>
       Hoge
     </div>
-  );
-};
+  )
+}
