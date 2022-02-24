@@ -1,0 +1,5 @@
+node_modules
+*.hbs
+.*
+
+index.html
