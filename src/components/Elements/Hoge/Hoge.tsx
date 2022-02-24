@@ -1,9 +1,5 @@
 export type HogeProps = {}
 
 export const Hoge = ({}: HogeProps) => {
-  return (
-    <div>
-      Hoge
-    </div>
-  )
+  return <div>Hoge</div>
 }

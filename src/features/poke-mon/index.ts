@@ -1,1 +1,1 @@
-export * from './components/PokeMon';
+export * from './components/PokeMon'

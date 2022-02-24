@@ -10,11 +10,7 @@ module.exports = {
       type: 'checkbox',
       name: 'choices',
       message: `\nfeature/components/Feature.tsx\nfeature/index.ts\n以外に事前に作成しておきたいフォルダを選択してください\n`,
-      choices: [
-        'api',
-        'hooks',
-        'types',
-      ]
+      choices: ['api', 'hooks', 'types']
     }
   ],
   actions: ({ choices }) => {

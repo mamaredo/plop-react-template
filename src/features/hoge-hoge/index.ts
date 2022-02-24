@@ -1,1 +1,1 @@
-export * from './components/HogeHoge';
+export * from './components/HogeHoge'
